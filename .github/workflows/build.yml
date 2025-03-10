@@ -1,46 +1,51 @@
-name: Build
+# Bu araç @keyiflerolsun tarafından | @KekikAkademi için yazılmıştır.
 
-# https://docs.github.com/en/actions/learn-github-actions/workflow-syntax-for-github-actions#concurrency
-concurrency: 
-  group: "build"
+name: CloudStream Derleyici
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event_name }}-${{ github.ref }}
   cancel-in-progress: true
 
 on:
+  workflow_dispatch:
   push:
     branches:
-      # choose your default branch
       - master
-      - main
     paths-ignore:
-      - '*.md'
+      - "**/*.md"
+      - "**/*.yml"
+      - "**/*.jpg"
+      - "**/*.png"
+      - "**/*.py"
 
 jobs:
-  build:
+  CloudStreamDerleyici:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: "'src' Depo Kontrolü"
         uses: actions/checkout@master
         with:
           path: "src"
 
-      - name: Checkout builds
+      - name: "'build' Depo Kontrolü"
         uses: actions/checkout@master
         with:
           ref: "builds"
           path: "builds"
-      
-      - name: Clean old builds
-        run: rm $GITHUB_WORKSPACE/builds/*.cs3
 
-      - name: Setup JDK 11
-        uses: actions/setup-java@v1
+      - name: Eski Derlemeleri Temizle
+        run: rm $GITHUB_WORKSPACE/builds/*.cs3 || true
+
+      - name: JDK 11 Ayarla
+        uses: actions/setup-java@v4
         with:
+          distribution: adopt
           java-version: 11
 
-      - name: Setup Android SDK
+      - name: Android SDK Ayarla
         uses: android-actions/setup-android@v2
 
-      - name: Build Plugins
+      - name: Eklentileri Derle
         run: |
           cd $GITHUB_WORKSPACE/src
           chmod +x gradlew
@@ -48,11 +53,11 @@ jobs:
           cp **/build/*.cs3 $GITHUB_WORKSPACE/builds
           cp build/plugins.json $GITHUB_WORKSPACE/builds
 
-      - name: Push builds
+      - name: Derlemeleri Yükle
         run: |
           cd $GITHUB_WORKSPACE/builds
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Actions"
           git add .
-          git commit --amend -m "Build $GITHUB_SHA" || exit 0   # do not error if nothing to commit
+          git commit --amend -m "$GITHUB_SHA 'nın Derlenmesi" || exit 0   # eğer commit edilecek bir şey yoksa hata verme
           git push --force
