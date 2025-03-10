@@ -1,0 +1,9 @@
+
+{
+    "name": "Türkçe Eklentiler | SporCloud",
+    "description": "Türkçe içerikli eklenti ",
+    "manifestVersion": 1,
+    "pluginLists": [
+      "https://raw.githubusercontent.com/MDuymaz/SporCloud/builds/plugins.json"
+    ]
+}
