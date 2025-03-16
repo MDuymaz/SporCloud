@@ -1,4 +1,4 @@
-package com.lagradost
+package com.SporCloud
 
 import com.lagradost.cloudstream3.plugins.CloudstreamPlugin
 import com.lagradost.cloudstream3.plugins.Plugin
