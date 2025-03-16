@@ -1,6 +1,6 @@
 // ! https://codeberg.org/cloudstream/cloudstream-extensions-multilingual/src/branch/master/FreeTVProvider/src/main/kotlin/com/lagradost/FreeTVProvider.kt
 
-package com.lagradost
+package com.SporCloud
 
 import android.util.Log
 import com.lagradost.cloudstream3.*
