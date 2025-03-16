@@ -1,6 +1,4 @@
-// ! Bu araç @keyiflerolsun tarafından | @KekikAkademi için yazılmıştır.
-
-package com.SporCloud
+package com.sarapcanagii
 
 import android.util.Log
 import org.jsoup.nodes.Element
