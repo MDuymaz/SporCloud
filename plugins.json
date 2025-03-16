@@ -18,5 +18,23 @@
         "description": "en yeni dizileri g\u00fcvenli ve h\u0131zl\u0131 \u015fekilde sunar.",
         "url": "https://raw.githubusercontent.com/MDuymaz/SporCloud/builds/DiziPal.cs3",
         "name": "DiziPal"
+    },
+    {
+        "iconUrl": "https://e7.pngegg.com/pngimages/955/749/png-clipart-ape-monkey-cartoon-sad-monkey-face-mammal-vertebrate.png",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/MDuymaz/SporCloud",
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "SporCloud"
+        ],
+        "tvTypes": [
+            "Live"
+        ],
+        "version": 22,
+        "internalName": "MDSpor",
+        "description": "en yeni dizileri g\u00fcvenli ve h\u0131zl\u0131 \u015fekilde sunar.",
+        "url": "https://raw.githubusercontent.com/MDuymaz/SporCloud/builds/MDSpor.cs3",
+        "name": "MDSpor"
     }
 ]
