@@ -9,7 +9,7 @@ import com.lagradost.cloudstream3.utils.AppUtils.parseJson
 import com.lagradost.cloudstream3.utils.AppUtils.toJson
 import java.io.InputStream
 
-class NeonSpor : MainAPI() {
+class MDSpor : MainAPI() {
     override var mainUrl              = "https://raw.githubusercontent.com/MDuymaz/efendikaptan/refs/heads/main/mac_verileri.m3u"
     override var name                 = "MDSpor"
     override val hasMainPage          = true
@@ -35,7 +35,7 @@ class NeonSpor : MainAPI() {
                     LiveSearchResponse(
                         name      = channelname,
                         url       = LoadData(streamurl, channelname, posterurl, chGroup, nation).toJson(),
-                        apiName   = this@NeonSpor.name,
+                        apiName   = this@MDSpor.name,
                         type      = TvType.Live,
                         posterUrl = posterurl,
                         lang      = nation
@@ -61,7 +61,7 @@ class NeonSpor : MainAPI() {
             LiveSearchResponse(
                 name      = channelname,
                 url       = LoadData(streamurl, channelname, posterurl, chGroup, nation).toJson(),
-                apiName   = this@NeonSpor.name,
+                apiName   = this@MDSpor.name,
                 type      = TvType.Live,
                 posterUrl = posterurl,
                 lang      = nation
@@ -97,7 +97,7 @@ class NeonSpor : MainAPI() {
                 recommendations.add(LiveSearchResponse(
                     name      = rcChannelName,
                     url       = LoadData(rcStreamUrl, rcChannelName, rcPosterUrl, rcChGroup, rcNation).toJson(),
-                    apiName   = this@NeonSpor.name,
+                    apiName   = this@MDSpor.name,
                     type      = TvType.Live,
                     posterUrl = rcPosterUrl,
                     lang      = rcNation,
