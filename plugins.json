@@ -1,22 +1,22 @@
 [
-   {
-        "iconUrl": "https://www.google.com/s2/favicons?domain=sezonlukdizi6.com&sz=%size%",
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=https://dizipal683.com&sz=%size%",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/MDuymaz/SporCloud",
-        "fileSize": 18745,
+        "fileSize": 18474,
         "status": 1,
         "language": "tr",
         "authors": [
             "SporCloud"
-            
         ],
         "tvTypes": [
-            "TvSeries"
+            "TvSeries",
+            "Movie"
         ],
-        "version": 2,
-        "internalName": "SezonlukDizi",
-        "description": "Dizi",
-        "url": "https://raw.githubusercontent.com/MDuymaz/SporCloud/builds/SezonlukDizi.cs3",
-        "name": "SezonlukDizi"
+        "version": 22,
+        "internalName": "DiziPal",
+        "description": "en yeni dizileri g\u00fcvenli ve h\u0131zl\u0131 \u015fekilde sunar.",
+        "url": "https://raw.githubusercontent.com/MDuymaz/SporCloud/builds/DiziPal.cs3",
+        "name": "DiziPal"
     }
 ]
