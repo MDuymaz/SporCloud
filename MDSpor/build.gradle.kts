@@ -3,7 +3,7 @@ version = 22
 cloudstream {
     authors     = listOf("SporCloud")
     language    = "tr"
-    description = "en yeni dizileri güvenli ve hızlı şekilde sunar."
+    description = "Live TV."
 
     /**
      * Status int as the following:
