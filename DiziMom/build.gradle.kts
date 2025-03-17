@@ -1,7 +1,7 @@
 version = 10
 
 cloudstream {
-    authors     = listOf("keyiflerolsun")
+    authors     = listOf("SporCloud")
     language    = "tr"
     description = "Binlerce yerli yabancı dizi arşivi, tüm sezonlar, kesintisiz bölümler. Sadece dizi izle, Dizimom heryerde seninle!"
 
