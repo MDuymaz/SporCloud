@@ -77,5 +77,24 @@
         "description": "RecTv APK",
         "url": "https://raw.githubusercontent.com/MDuymaz/SporCloud/builds/RecTV.cs3",
         "name": "RecTV"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=sezonlukdizi6.com&sz=%size%",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/MDuymaz/SporCloud",
+        "fileSize": 18736,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "SporCLoud"
+        ],
+        "tvTypes": [
+            "TvSeries"
+        ],
+        "version": 2,
+        "internalName": "SezonlukDizi",
+        "description": "G\u00fcncel ve eski dizileri en iyi g\u00f6r\u00fcnt\u00fc kalitesiyle bulabilece\u011finiz yabanc\u0131 dizi izleme siteniz.",
+        "url": "https://raw.githubusercontent.com/MDuymaz/SporCloud/builds/SezonlukDizi.cs3",
+        "name": "SezonlukDizi"
     }
 ]
