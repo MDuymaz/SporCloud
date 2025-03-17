@@ -37,5 +37,26 @@
         "description": "Live TV.",
         "url": "https://raw.githubusercontent.com/MDuymaz/SporCloud/builds/MDSpor.cs3",
         "name": "MDSpor"
+    },
+    {
+        "iconUrl": "https://rectvapk.cc/wp-content/uploads/2023/02/Rec-TV.webp",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/MDuymaz/SporCloud",
+        "fileSize": 20090,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "SporCloud"
+        ],
+        "tvTypes": [
+            "Movie",
+            "Live",
+            "TvSeries"
+        ],
+        "version": 68,
+        "internalName": "RecTV",
+        "description": "RecTv APK",
+        "url": "https://raw.githubusercontent.com/MDuymaz/SporCloud/builds/RecTV.cs3",
+        "name": "RecTV"
     }
 ]
