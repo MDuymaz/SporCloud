@@ -54,9 +54,3 @@ jobs:
           echo "Eski workflow artefaktları temizleniyor..."
           curl -X DELETE -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
           "https://api.github.com/repos/${{ github.repository }}/actions/workflows/{workflow_id}/runs"
-
-      - name: Yedekleme ve Sıkıştırma
-        run: |
-          echo "Yedekleme ve sıkıştırma işlemi başlıyor..."
-          # Burada doğru dosya yolunu belirtmeniz gerekiyor
-          tar -czf backup.tar.gz path/to/your/files/
