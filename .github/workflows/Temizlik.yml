@@ -5,7 +5,7 @@ on:
     workflows: ["Prebuild Workflow"]  # Bu, prebuild workflow'undan sonra çalışacak
     types:
       - completed
-  workflow_dispatch:
+
 jobs:
   clean_up:
     runs-on: ubuntu-latest
@@ -16,12 +16,18 @@ jobs:
           sudo apt-get clean
           sudo apt-get autoremove -y
           rm -rf ~/.cache/*
-          git gc --prune=now
-          git clean -fdx
+          
+          # Git deposunun var olup olmadığını kontrol et
+          if [ -d ".git" ]; then
+            echo "Git deposu bulundu. Git temizliği yapılıyor..."
+            git gc --prune=now
+            git clean -fdx
+          else
+            echo "Git deposu bulunamadı, git temizliği yapılmadı."
+          fi
 
       - name: Artifaktları Temizle
         run: |
           echo "GitHub Actions artifaktları temizleniyor..."
           curl -X DELETE -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
           "https://api.github.com/repos/${{ github.repository }}/actions/artifacts"
-
