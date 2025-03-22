@@ -5,7 +5,7 @@ on:
     workflows: ["Prebuild Workflow"]  # Bu, prebuild workflow'undan sonra çalışacak
     types:
       - completed
-
+  workflow_dispatch:
 jobs:
   clean_up:
     runs-on: ubuntu-latest
