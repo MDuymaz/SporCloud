@@ -47,7 +47,7 @@ jobs:
       - name: Log Dosyalarını Temizle
         run: |
           echo "Log dosyaları temizleniyor..."
-          rm -rf /tmp/*
+          sudo rm -rf /tmp/* || true
 
       - name: Eski Workflow Artefaktlarını Temizle
         run: |
