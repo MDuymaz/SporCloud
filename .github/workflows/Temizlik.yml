@@ -6,6 +6,7 @@ on:
     types:
       - completed
   workflow_dispatch:
+
 jobs:
   clean_up:
     runs-on: ubuntu-latest
@@ -16,7 +17,7 @@ jobs:
           sudo apt-get clean
           sudo apt-get autoremove -y
           rm -rf ~/.cache/*
-          
+
           # Git deposunun var olup olmadığını kontrol et
           if [ -d ".git" ]; then
             echo "Git deposu bulundu. Git temizliği yapılıyor..."
@@ -26,8 +27,35 @@ jobs:
             echo "Git deposu bulunamadı, git temizliği yapılmadı."
           fi
 
+      - name: Geçici Derleme Çıktılarını Temizle
+        run: |
+          echo "Geçici derleme çıktıları temizleniyor..."
+          rm -rf build/ dist/ .tox/ .nox/ .coverage/ *.egg-info .eggs
+
+      - name: Cache Temizleme
+        run: |
+          echo "GitHub Actions cache temizleniyor..."
+          curl -X DELETE -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+          "https://api.github.com/repos/${{ github.repository }}/actions/caches"
+
       - name: Artifaktları Temizle
         run: |
           echo "GitHub Actions artifaktları temizleniyor..."
           curl -X DELETE -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
           "https://api.github.com/repos/${{ github.repository }}/actions/artifacts"
+
+      - name: Log Dosyalarını Temizle
+        run: |
+          echo "Log dosyaları temizleniyor..."
+          rm -rf /tmp/*
+
+      - name: Eski Workflow Artefaktlarını Temizle
+        run: |
+          echo "Eski workflow artefaktları temizleniyor..."
+          curl -X DELETE -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+          "https://api.github.com/repos/${{ github.repository }}/actions/workflows/{workflow_id}/runs"
+
+      - name: Yedekleme ve Sıkıştırma
+        run: |
+          echo "Yedekleme ve sıkıştırma işlemi başlıyor..."
+          tar -czf backup.tar.gz path/to/large/files/
