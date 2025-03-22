@@ -1,4 +1,4 @@
-name: Domain Değişiklik Kontrolü
+name: Domain Değişiklik Kontrolü 2
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.event_name }}-${{ github.ref }}
