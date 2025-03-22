@@ -1,0 +1,27 @@
+name: Temizlik İşlemi
+
+on:
+  workflow_run:
+    workflows: ["Prebuild Workflow"]  # Bu, prebuild workflow'undan sonra çalışacak
+    types:
+      - completed
+
+jobs:
+  clean_up:
+    runs-on: ubuntu-latest
+    steps:
+      - name: GitHub Actions ortamını temizle
+        run: |
+          echo "Geçici dosyalar temizleniyor..."
+          sudo apt-get clean
+          sudo apt-get autoremove -y
+          rm -rf ~/.cache/*
+          git gc --prune=now
+          git clean -fdx
+
+      - name: Artifaktları Temizle
+        run: |
+          echo "GitHub Actions artifaktları temizleniyor..."
+          curl -X DELETE -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+          "https://api.github.com/repos/${{ github.repository }}/actions/artifacts"
+
