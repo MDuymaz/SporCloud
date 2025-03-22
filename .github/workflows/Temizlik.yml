@@ -58,4 +58,5 @@ jobs:
       - name: Yedekleme ve Sıkıştırma
         run: |
           echo "Yedekleme ve sıkıştırma işlemi başlıyor..."
-          tar -czf backup.tar.gz path/to/large/files/
+          # Burada doğru dosya yolunu belirtmeniz gerekiyor
+          tar -czf backup.tar.gz path/to/your/files/
