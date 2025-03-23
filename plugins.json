@@ -1,0 +1,302 @@
+[
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=animekai.to&sz=%size%",
+        "jarFileSize": 108451,
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/MDuymaz/SporCloud",
+        "fileSize": 27805,
+        "status": 1,
+        "language": "en",
+        "authors": [
+            "SporCloud"
+        ],
+        "tvTypes": [
+            "Anime",
+            "OVA",
+            "AnimeMovie"
+        ],
+        "version": 9,
+        "internalName": "AnimeKai",
+        "jarUrl": "https://raw.githubusercontent.com/MDuymaz/SporCloud/builds/AnimeKai.jar",
+        "description": "Animes & Animes Movie",
+        "url": "https://raw.githubusercontent.com/MDuymaz/SporCloud/builds/AnimeKai.cs3",
+        "name": "AnimeKai"
+    },
+    {
+        "iconUrl": "https://animenosub.com/wp-content/uploads/2024/02/Animenosub-logo.png",
+        "jarFileSize": 78436,
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/MDuymaz/SporCloud",
+        "fileSize": 17012,
+        "status": 1,
+        "language": "en",
+        "authors": [
+            "SporCloud"
+        ],
+        "tvTypes": [
+            "AnimeMovie",
+            "Anime",
+            "Cartoon"
+        ],
+        "version": 7,
+        "internalName": "Animenosub",
+        "jarUrl": "https://raw.githubusercontent.com/MDuymaz/SporCloud/builds/Animenosub.jar",
+        "description": "Anime and Movies",
+        "url": "https://raw.githubusercontent.com/MDuymaz/SporCloud/builds/Animenosub.cs3",
+        "name": "Animenosub"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=www.dizibox.de&sz=%size%",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/MDuymaz/SporCloud",
+        "fileSize": 20713,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "SporCloud"
+        ],
+        "tvTypes": [
+            "TvSeries"
+        ],
+        "version": 3,
+        "internalName": "DiziBox",
+        "description": "Yabanc\u0131 Dizi izle, T\u00fcm yabanc\u0131 dizilerin yeni ve eski sezonlar\u0131n\u0131 full hd izleyebilece\u011finiz elit site.",
+        "url": "https://raw.githubusercontent.com/MDuymaz/SporCloud/builds/DiziBox.cs3",
+        "name": "DiziBox"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=www.dizimom.tv&sz=%size%",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/MDuymaz/SporCloud",
+        "fileSize": 28054,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "SporCloud"
+        ],
+        "tvTypes": [
+            "TvSeries"
+        ],
+        "version": 10,
+        "internalName": "DiziMom",
+        "description": "Binlerce yerli yabanc\u0131 dizi ar\u015fivi, t\u00fcm sezonlar, kesintisiz b\u00f6l\u00fcmler. Sadece dizi izle, Dizimom heryerde seninle!",
+        "url": "https://raw.githubusercontent.com/MDuymaz/SporCloud/builds/DiziMom.cs3",
+        "name": "DiziMom"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=https://dizipal683.com&sz=%size%",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/MDuymaz/SporCloud",
+        "fileSize": 18476,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "SporCloud"
+        ],
+        "tvTypes": [
+            "TvSeries",
+            "Movie"
+        ],
+        "version": 24,
+        "internalName": "DiziPal",
+        "description": "en yeni dizileri g\u00fcvenli ve h\u0131zl\u0131 \u015fekilde sunar.",
+        "url": "https://raw.githubusercontent.com/MDuymaz/SporCloud/builds/DiziPal.cs3",
+        "name": "DiziPal"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=filmmakinesi.film&sz=%size%",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/MDuymaz/SporCloud",
+        "fileSize": 13855,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "SporCloud"
+        ],
+        "tvTypes": [
+            "Movie"
+        ],
+        "version": 6,
+        "internalName": "FilmMakinesi",
+        "description": "Film Makinesi, en yeni ve en g\u00fcncel filmleri sitemizde full HD kalite fark\u0131 ile izleyebilirsiniz. HD film izle denildi\u011finde akla gelen en kaliteli film izleme sitesi.",
+        "url": "https://raw.githubusercontent.com/MDuymaz/SporCloud/builds/FilmMakinesi.cs3",
+        "name": "FilmMakinesi"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=www.filmmodu17.com&sz=%size%",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/MDuymaz/SporCloud",
+        "fileSize": 14148,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "SporCloud"
+        ],
+        "tvTypes": [
+            "Movie"
+        ],
+        "version": 8,
+        "internalName": "FilmModu",
+        "description": "Film modun geldiyse y\u00fcksek kalitede en yeni filmleri izle, 1080p izleyebilece\u011finiz reklamsiz film sitesi.",
+        "url": "https://raw.githubusercontent.com/MDuymaz/SporCloud/builds/FilmModu.cs3",
+        "name": "FilmModu"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=fullhdfilm.pro&sz=%size%",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/MDuymaz/SporCloud",
+        "fileSize": 18246,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "SporCloud"
+        ],
+        "tvTypes": [
+            "Movie",
+            "TvSeries"
+        ],
+        "version": 13,
+        "internalName": "FullHDFilm",
+        "description": "Fullhdfilm ile en yeni vizyon filmler Full HD ve kesintisiz film sizlerle. \u00d6zg\u00fcn film ar\u015fivimizle en \u00fcst\u00fcn kaliteli film izle keyfini sunuyoruz.",
+        "url": "https://raw.githubusercontent.com/MDuymaz/SporCloud/builds/FullHDFilm.cs3",
+        "name": "FullHDFilm"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=fullhdfilmizlede.net&sz=%size%",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/MDuymaz/SporCloud",
+        "fileSize": 14727,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "SporCloud"
+        ],
+        "tvTypes": [
+            "Movie"
+        ],
+        "version": 1,
+        "internalName": "FullHDFilm\u0130zlede",
+        "description": "En g\u00fcncel ve pop\u00fcler filmleri Full HD kalitesinde, T\u00fcrk\u00e7e altyaz\u0131l\u0131 veya T\u00fcrk\u00e7e dublaj se\u00e7enekleriyle izleyebilece\u011finiz tek adres! Sinema tutkunlar\u0131 i\u00e7in en \u00f6zel film deneyimini ya\u015famak i\u00e7in fullhdfilmizlede.net",
+        "url": "https://raw.githubusercontent.com/MDuymaz/SporCloud/builds/FullHDFilm\u0130zlede.cs3",
+        "name": "FullHDFilm\u0130zlede"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=www.fullhdfilmizlesene.de&sz=%size%",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/MDuymaz/SporCloud",
+        "fileSize": 28074,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "SporCloud"
+        ],
+        "tvTypes": [
+            "Movie"
+        ],
+        "version": 4,
+        "internalName": "FullHDFilmizlesene",
+        "description": "Sinema zevkini evinize kadar getirdik. T\u00fcrkiye'nin lider Film sitesinde, en yeni filmleri Full HD izleyin.",
+        "url": "https://raw.githubusercontent.com/MDuymaz/SporCloud/builds/FullHDFilmizlesene.cs3",
+        "name": "FullHDFilmizlesene"
+    },
+    {
+        "iconUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh3vCp6N1K4bECoYRQD-cisJF2_6V_Hk01ZhDmoPR2JuM8O5qr4MqrPO1munM9cRlleBBSK6odYhLtDBWv4E3vhPhynlmS5hVVtJZShHoGA5REQ8_3v8SIlccTEqzVQu2UJyNYQdJNrKIfWy66RQeT0D-CcmFCbHPz5023H6p2v5fv4NVloZ5Rqo_yGrIY/s320/iNat-Box-App.png",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/MDuymaz/SporCloud",
+        "fileSize": 27509,
+        "status": 3,
+        "language": "tr",
+        "authors": [
+            "SporCloud"
+        ],
+        "tvTypes": [
+            "Movie",
+            "TvSeries",
+            "Live"
+        ],
+        "version": 14,
+        "internalName": "InatBox",
+        "description": "\u0130natBox cloudstream eklentisidir. Sevdi\u011finiz yay\u0131n platformlar\u0131n\u0131 ve canl\u0131 ma\u00e7lar\u0131 burada bulabilirsiniz.",
+        "url": "https://raw.githubusercontent.com/MDuymaz/SporCloud/builds/InatBox.cs3",
+        "name": "InatBox"
+    },
+    {
+        "iconUrl": "https://e7.pngegg.com/pngimages/955/749/png-clipart-ape-monkey-cartoon-sad-monkey-face-mammal-vertebrate.png",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/MDuymaz/SporCloud",
+        "fileSize": 17220,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "SporCloud"
+        ],
+        "tvTypes": [
+            "Live"
+        ],
+        "version": 22,
+        "internalName": "MDSpor",
+        "description": "Live TV.",
+        "url": "https://raw.githubusercontent.com/MDuymaz/SporCloud/builds/MDSpor.cs3",
+        "name": "MDSpor"
+    },
+    {
+        "iconUrl": "https://rectvapk.cc/wp-content/uploads/2023/02/Rec-TV.webp",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/MDuymaz/SporCloud",
+        "fileSize": 20089,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "SporCloud"
+        ],
+        "tvTypes": [
+            "Movie",
+            "Live",
+            "TvSeries"
+        ],
+        "version": 69,
+        "internalName": "RecTV",
+        "description": "RecTv APK",
+        "url": "https://raw.githubusercontent.com/MDuymaz/SporCloud/builds/RecTV.cs3",
+        "name": "RecTV"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=sezonlukdizi6.com&sz=%size%",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/MDuymaz/SporCloud",
+        "fileSize": 18750,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "SporCLoud"
+        ],
+        "tvTypes": [
+            "TvSeries"
+        ],
+        "version": 2,
+        "internalName": "SezonlukDizi",
+        "description": "G\u00fcncel ve eski dizileri en iyi g\u00f6r\u00fcnt\u00fc kalitesiyle bulabilece\u011finiz yabanc\u0131 dizi izleme siteniz.",
+        "url": "https://raw.githubusercontent.com/MDuymaz/SporCloud/builds/SezonlukDizi.cs3",
+        "name": "SezonlukDizi"
+    },
+    {
+        "iconUrl": "https://www.stremio.com/website/stremio-purple-small.png",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/MDuymaz/SporCloud",
+        "fileSize": 70099,
+        "status": 1,
+        "language": "en",
+        "authors": [
+            "SporCloud"
+        ],
+        "tvTypes": [
+            "TvSeries",
+            "Movie"
+        ],
+        "version": 13,
+        "internalName": "StremioX",
+        "description": "[!] Requires Setup \n- StremioX allows you to use stream addons \n- StremioC allows you to use catalog addons",
+        "url": "https://raw.githubusercontent.com/MDuymaz/SporCloud/builds/StremioX.cs3",
+        "name": "StremioX"
+    }
+]
