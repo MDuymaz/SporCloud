@@ -41,33 +41,35 @@ subprojects {
         // you can modify it to use other git hosting services, like gitlab
         setRepo(System.getenv("GITHUB_REPOSITORY") ?: "https://github.com/MDuymaz/SporCloud")
     }
+android {
+    namespace = "SporCloud"
 
-    android {
-        namespace = "SporCloud"
+    defaultConfig {
+        minSdk = 21
+        compileSdkVersion(35)
+        targetSdk = 35
+    }
 
-        defaultConfig {
-            minSdk = 21
-            compileSdkVersion(35)
-            targetSdk = 35
-        }
+    buildFeatures {
+        buildConfig = true // BuildConfig desteğini aç
+    }
 
-        compileOptions {
-            sourceCompatibility = JavaVersion.VERSION_1_8
-            targetCompatibility = JavaVersion.VERSION_1_8
-        }
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
 
-        tasks.withType<KotlinJvmCompile> {
-            compilerOptions {
-                jvmTarget.set(JvmTarget.JVM_1_8) // Required
-                // Disables some unnecessary features
-                freeCompilerArgs.addAll(
-                    "-Xno-call-assertions",
-                    "-Xno-param-assertions",
-                    "-Xno-receiver-assertions"
-                )
-            }
+    tasks.withType<KotlinJvmCompile> {
+        compilerOptions {
+            jvmTarget.set(JvmTarget.JVM_1_8)
+            freeCompilerArgs.addAll(
+                "-Xno-call-assertions",
+                "-Xno-param-assertions",
+                "-Xno-receiver-assertions"
+            )
         }
     }
+}
 
     dependencies {
         val implementation by configurations
