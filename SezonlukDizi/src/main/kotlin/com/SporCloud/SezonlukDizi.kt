@@ -17,6 +17,7 @@ class SezonlukDizi : MainAPI() {
     override val supportedTypes       = setOf(TvType.TvSeries)
 
     override val mainPage = mainPageOf(
+        "${mainUrl}/page/"                                    to "Son Filmler",
         "${mainUrl}/diziler.asp?siralama_tipi=id&s="          to "Son Eklenenler",
         "${mainUrl}/diziler.asp?siralama_tipi=id&tur=mini&s=" to "Mini Diziler",
         "${mainUrl}/diziler.asp?siralama_tipi=id&kat=2&s="    to "Yerli Diziler",
