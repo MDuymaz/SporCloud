@@ -25,10 +25,10 @@ allprojects {
     }
 }
 
-fun Project.cloudstream(configuration: CloudstreamExtension.() -> Unit) = 
+fun Project.cloudstream(configuration: CloudstreamExtension.() -> Unit) =
     extensions.getByName<CloudstreamExtension>("cloudstream").configuration()
 
-fun Project.android(configuration: LibraryExtension.() -> Unit) = 
+fun Project.android(configuration: LibraryExtension.() -> Unit) =
     extensions.getByName<LibraryExtension>("android").configuration()
 
 subprojects {
@@ -46,7 +46,7 @@ subprojects {
         buildFeatures {
             buildConfig = true
         }
-        
+
         defaultConfig {
             minSdk = 21
             compileSdkVersion(35)
@@ -84,6 +84,9 @@ subprojects {
         implementation("io.karn:khttp-android:0.1.2")
         implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.10.1")
         implementation("org.mozilla:rhino:1.8.0")
+
+        // Gson Bağımlılığı Eklendi
+        implementation("com.google.code.gson:gson:2.8.9")
     }
 }
 
