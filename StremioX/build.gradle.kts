@@ -1,7 +1,7 @@
 import org.jetbrains.kotlin.konan.properties.Properties
 
 // use an integer for version numbers
-version = 14
+version = 13
 
 android {
     defaultConfig {
@@ -32,5 +32,5 @@ cloudstream {
         "Movie",
     )
 
-    iconUrl = "https://is1-ssl.mzstatic.com/image/thumb/Purple123/v4/1c/ef/01/1cef01c8-00be-1f19-2f97-10dce27b71c3/AppIcon-1x_U007emarketing-0-7-0-85-220.png/1200x630wa.png"
+    iconUrl = "https://raw.githubusercontent.com/hexated/cloudstream-extensions-hexated/master/StremioX/icon.png"
 }
