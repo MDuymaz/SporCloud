@@ -5,6 +5,8 @@ import com.lagradost.cloudstream3.utils.*
 import com.lagradost.cloudstream3.utils.ExtractorLink
 import com.lagradost.cloudstream3.utils.ExtractorLinkType
 import com.lagradost.cloudstream3.utils.Qualities
+import java.io.BufferedReader
+import java.io.InputStreamReader
 import java.util.regex.Pattern
 
 class DiskYandexComTr : ExtractorApi() {
@@ -30,9 +32,21 @@ class DiskYandexComTr : ExtractorApi() {
             throw Exception("Failed to fetch URL: ${request.code}")
         }
 
+        // Veriyi InputStream olarak oku (belleğe yüklemek yerine akış halinde işler)
+        val inputStream = request.body?.byteStream() ?: throw Exception("Failed to get response body")
+        val reader = BufferedReader(InputStreamReader(inputStream))
+        val stringBuilder = StringBuilder()
+        var line: String?
+
+        while (reader.readLine().also { line = it } != null) {
+            stringBuilder.append(line).append("\n")
+        }
+
+        reader.close()
+        val htmlContent = stringBuilder.toString()
+
         // Extract the master-playlist.m3u8 URL using regex
-        val htmlContent = request.text
-        val matcher     = masterPlaylistRegex.matcher(htmlContent)
+        val matcher = masterPlaylistRegex.matcher(htmlContent)
         if (matcher.find()) {
             val masterPlaylistUrl = matcher.group()
 
