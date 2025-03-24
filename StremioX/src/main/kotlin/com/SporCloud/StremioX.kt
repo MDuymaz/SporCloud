@@ -15,7 +15,7 @@ import kotlin.math.roundToInt
 import com.lagradost.cloudstream3.metaproviders.TmdbProvider
 
 class StremioX : TmdbProvider() {
-    override var mainUrl = "https://torrentio.strem.fun"
+    override var mainUrl = "https://torrentio.strem.fun/configure"
     override var name = "StremioX"
     override val hasMainPage = true
     override val hasQuickSearch = true
