@@ -41,17 +41,19 @@ subprojects {
         // you can modify it to use other git hosting services, like gitlab
         setRepo(System.getenv("GITHUB_REPOSITORY") ?: "https://github.com/MDuymaz/SporCloud")
     }
+
 android {
     namespace = "SporCloud"
 
+    compileSdk = 35
+
     defaultConfig {
         minSdk = 21
-        compileSdkVersion(35)
         targetSdk = 35
     }
 
     buildFeatures {
-        buildConfig = true // BuildConfig desteğini aç
+        buildConfig = true // Hata burada olabilir, düzeltildi
     }
 
     compileOptions {
@@ -59,7 +61,7 @@ android {
         targetCompatibility = JavaVersion.VERSION_1_8
     }
 
-    tasks.withType<KotlinJvmCompile> {
+    tasks.withType<KotlinJvmCompile>().configureEach {
         compilerOptions {
             jvmTarget.set(JvmTarget.JVM_1_8)
             freeCompilerArgs.addAll(
