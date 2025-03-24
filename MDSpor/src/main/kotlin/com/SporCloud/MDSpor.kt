@@ -10,7 +10,7 @@ import com.lagradost.cloudstream3.utils.AppUtils.toJson
 import java.io.InputStream
 
 class MDSpor : MainAPI() {
-    override var mainUrl              = "https://tinyurl.com/mduymazm3u"
+    override var mainUrl              = "https://raw.githubusercontent.com/MDuymazz/sitem3u/refs/heads/main/gol.m3u"
     override var name                 = "MDSpor"
     override val hasMainPage          = true
     override var lang                 = "tr"
