@@ -43,7 +43,7 @@ subprojects {
     }
 
 android {
-    namespace = "SporCloud"
+    namespace = "com.SporCloud"
 
     compileSdk = 35
 
