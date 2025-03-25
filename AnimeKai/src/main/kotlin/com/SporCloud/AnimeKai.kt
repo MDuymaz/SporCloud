@@ -94,7 +94,7 @@ class AnimeKai : MainAPI() {
             "$mainUrl/browser?keyword=&sort=updated_date" to "Latest Episode",
             "$mainUrl/browser?keyword=&status[]=releasing&sort=trending" to "Trending",
             "$mainUrl/browser?keyword=&sort=released_date" to "New Releases",
-            "$mainUrl/browser?keyword=&status%5B%5D=completed&sort=mal_score" to "Completed"
+            "$mainUrl/browser?keyword=&status%5B%5D=completed&sort=updated_date" to "Completed"
         )
 
     override suspend fun search(query: String): List<SearchResponse> {
