@@ -91,7 +91,7 @@ class AnimeKai : MainAPI() {
 
     override val mainPage =
         mainPageOf(
-            "$mainUrl/browser?keyword=&status%5B%5D=releasing&sort=updated_date" to "Latest Episode",
+            "$mainUrl/browser?keyword=&sort=updated_date" to "Latest Episode",
             "$mainUrl/browser?keyword=&status[]=releasing&sort=trending" to "Trending",
             "$mainUrl/browser?keyword=&sort=released_date" to "New Releases",
             "$mainUrl/browser?keyword=&status%5B%5D=completed&sort=mal_score" to "Completed"
