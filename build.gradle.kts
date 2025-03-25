@@ -43,7 +43,6 @@ subprojects {
     android {
         namespace = "com.SporCloud"
    
-    }
         buildFeatures {
             buildConfig = true
         }
