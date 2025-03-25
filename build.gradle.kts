@@ -42,8 +42,7 @@ subprojects {
 
     android {
         namespace = "com.SporCloud"
-    defaultConfig {
-        buildConfigField "String", "TMDB_API", "\"${TMDB_API_KEY}\""
+   
     }
         buildFeatures {
             buildConfig = true
