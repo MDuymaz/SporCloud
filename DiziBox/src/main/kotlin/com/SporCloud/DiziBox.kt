@@ -75,19 +75,14 @@ class DiziBox : MainAPI() {
     )
 
     override suspend fun getMainPage(page: Int, request: MainPageRequest): HomePageResponse {
-        val url      = request.data.replace("SAYFA", "$page")
-        val document = app.get(
-            url,
-            cookies     = mapOf(
-                "LockUser"      to "true",
-                "isTrustedUser" to "true",
-                "dbxu"          to "1722403730363"
-            ),
-            interceptor = interceptor
-        ).document
-        val home     = document.select("article.detailed-article").mapNotNull { it.toMainPageResult() }
+        val document = app.get(request.data).document
+        val home = if (request.data.contains("/tum-bolumler/?tip=populer")) {
+            document.select("article.episode-card").mapNotNull { it.sonBolumler() }
+        } else {
+            document.select("article.type2 ul li").mapNotNull { it.diziler() }
+        }
 
-        return newHomePageResponse(request.name, home)
+        return newHomePageResponse(request.name, home, hasNext = false)
     }
 
     private fun Element.toMainPageResult(): SearchResponse? {
