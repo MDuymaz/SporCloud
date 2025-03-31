@@ -214,4 +214,20 @@ class DiziBox : MainAPI() {
 
         return true
     }
+
+    // SearchItem data class definition
+    data class SearchItem(
+        val title: String,
+        val url: String,
+        val poster: String? = null
+    )
+
+    // SearchResponse data class definition
+    data class SearchResponse(
+        val title: String,
+        val url: String,
+        val type: TvType,
+        var posterUrl: String? = null,
+        var extraData: MutableMap<String, Any> = mutableMapOf() // extraData özelliği ekleniyor
+    )
 }
