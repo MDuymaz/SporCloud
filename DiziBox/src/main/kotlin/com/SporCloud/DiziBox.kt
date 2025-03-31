@@ -12,6 +12,7 @@ import com.lagradost.cloudstream3.utils.StringUtils.decodeUri
 import okhttp3.Interceptor
 import okhttp3.Response
 import org.jsoup.Jsoup
+import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper // Jackson mapper ekle
 
 class DiziBox : MainAPI() {
     override var mainUrl = "https://www.dizibox.live"
@@ -71,7 +72,8 @@ class DiziBox : MainAPI() {
 
         return newTvSeriesSearchResponse(episodeTitle, href.substringBefore("/sezon"), TvType.TvSeries) {
             this.posterUrl = posterUrl
-            this.publishDate = publishDate
+            // Eğer publishDate'i eklemek istiyorsanız, bunu burada veri olarak döndürebiliriz:
+            this.extraData["publishDate"] = publishDate
         }
     }
 
@@ -88,11 +90,7 @@ class DiziBox : MainAPI() {
         val href = "${mainUrl}${this.url}"
         val posterUrl = this.poster
 
-        return if (this.type == "series") {
-            newTvSeriesSearchResponse(title, href, TvType.TvSeries) { this.posterUrl = posterUrl }
-        } else {
-            newMovieSearchResponse(title, href, TvType.Movie) { this.posterUrl = posterUrl }
-        }
+        return newTvSeriesSearchResponse(title, href, TvType.TvSeries) { this.posterUrl = posterUrl }
     }
 
     override suspend fun search(query: String): List<SearchResponse> {
@@ -106,6 +104,7 @@ class DiziBox : MainAPI() {
             data = mapOf("query" to query)
         )
 
+        // Jackson mapper'ı kullanarak JSON verisini alıyoruz:
         val searchItemsMap = jacksonObjectMapper().readValue<Map<String, SearchItem>>(responseRaw.text)
         return searchItemsMap.values.map { it.toPostSearchResult() }
     }
