@@ -16,6 +16,9 @@ on:
       - "**/*.jpg"
       - "**/*.png"
       - "**/*.py"
+      schedule:
+    - cron: 11 */10 * * *  # Zamanlanmış tetikleme
+
 
 jobs:
   CloudStreamDerleyici:
