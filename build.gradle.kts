@@ -11,9 +11,9 @@ buildscript {
     }
 
     dependencies {
-        classpath("com.android.tools.build:gradle:8.7.3")
+        classpath("com.android.tools.build:gradle:8.3.0")
         classpath("com.github.recloudstream:gradle:-SNAPSHOT")
-        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:2.1.0")
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.23")
     }
 }
 
@@ -41,16 +41,15 @@ subprojects {
     }
 
     android {
-        namespace = "com.SporCloud"
-   
+        // namespace her modülde AndroidManifest.xml içinden alınacak
         buildFeatures {
             buildConfig = true
         }
 
         defaultConfig {
             minSdk = 21
-            compileSdkVersion(35)
-            targetSdk = 35
+            compileSdk = 34
+            targetSdk = 34
         }
 
         compileOptions {
@@ -82,10 +81,8 @@ subprojects {
         implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.13.1")
         implementation("com.fasterxml.jackson.core:jackson-databind:2.13.1")
         implementation("io.karn:khttp-android:0.1.2")
-        implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.10.1")
+        implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
         implementation("org.mozilla:rhino:1.8.0")
-
-        // Gson Bağımlılığı Eklendi
         implementation("com.google.code.gson:gson:2.8.9")
     }
 }
