@@ -16,9 +16,6 @@ on:
       - "**/*.jpg"
       - "**/*.png"
       - "**/*.py"
-      schedule:
-    - cron: 11 */10 * * *  # Zamanlanmış tetikleme
-
 
 jobs:
   CloudStreamDerleyici:
@@ -46,14 +43,6 @@ jobs:
 
       - name: Android SDK Ayarla
         uses: android-actions/setup-android@v3.2.2
-
-      - name: Access Secrets
-        env:
-          TMDB_API: ${{ secrets.TMDB_API }}
-
-        run: |
-          cd $GITHUB_WORKSPACE/src
-          echo TMDB_API=$TMDB_API >> local.properties
 
       - name: Eklentileri Derle
         run: |
