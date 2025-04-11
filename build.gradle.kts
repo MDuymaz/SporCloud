@@ -50,6 +50,10 @@ subprojects {
             targetSdk = 35
         }
 
+        buildFeatures {
+            buildConfig = true  // Burada buildConfig desteğini etkinleştiriyoruz
+        }
+
         compileOptions {
             sourceCompatibility = JavaVersion.VERSION_1_8
             targetCompatibility = JavaVersion.VERSION_1_8
@@ -68,7 +72,6 @@ subprojects {
             }
         }
     }
-
 
     dependencies {
         val cloudstream by configurations
