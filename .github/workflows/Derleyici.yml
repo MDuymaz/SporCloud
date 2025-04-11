@@ -20,20 +20,21 @@ on:
 jobs:
   CloudStreamDerleyici:
     runs-on: ubuntu-latest
+
     steps:
-      - name: "'src' Depo Kontrolü"
+      - name: 'src Deposu Kontrolü'
         uses: actions/checkout@v4.2.2
         with:
           path: "src"
 
-      - name: "'build' Depo Kontrolü"
+      - name: 'builds Deposu Kontrolü'
         uses: actions/checkout@v4.2.2
         with:
           ref: "builds"
           path: "builds"
 
       - name: Eski Derlemeleri Temizle
-        run: rm $GITHUB_WORKSPACE/builds/*.cs3 || true
+        run: rm -f $GITHUB_WORKSPACE/builds/*.cs3 || true
 
       - name: JDK 17 Ayarla
         uses: actions/setup-java@v4.6.0
@@ -44,19 +45,28 @@ jobs:
       - name: Android SDK Ayarla
         uses: android-actions/setup-android@v3.2.2
 
-      - name: Eklentileri Derle
+      - name: Android ortam değişkenlerini ayarla
+        run: |
+          echo "ANDROID_HOME=$ANDROID_HOME" >> $GITHUB_ENV
+          echo "PATH=$ANDROID_HOME/platform-tools:$PATH" >> $GITHUB_ENV
+
+      - name: Eklentileri Derle (Detaylı Log ile)
         run: |
           cd $GITHUB_WORKSPACE/src
           chmod +x gradlew
-          ./gradlew make makePluginsJson
-          cp **/build/*.cs3 $GITHUB_WORKSPACE/builds
-          cp build/plugins.json $GITHUB_WORKSPACE/builds
+          ./gradlew clean make makePluginsJson --stacktrace --info | tee $GITHUB_WORKSPACE/builds/buildlog.txt
+          find . -path "*/build/*.cs3" -exec cp {} $GITHUB_WORKSPACE/builds \;
+          cp build/plugins.json $GITHUB_WORKSPACE/builds || true
 
       - name: Derlemeleri Yükle
         run: |
           cd $GITHUB_WORKSPACE/builds
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Actions"
-          git add .
-          git commit --amend -m "$GITHUB_SHA 'nın Derlenmesi" || exit 0   # eğer commit edilecek bir şey yoksa hata verme
-          git push --force
+          if git diff --quiet; then
+            echo "Değişiklik yok, commit atlanıyor."
+          else
+            git add .
+            git commit -m "$GITHUB_SHA 'nın Derlenmesi"
+            git push
+          fi
