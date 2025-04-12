@@ -1,3 +1,6 @@
+// ! Bu araç @keyiflerolsun tarafından | @KekikAkademi için yazılmıştır.
+// ! https://github.com/Amiqo09/Diziyou-Cloudstream
+
 package com.SporCloud
 
 import android.util.Log
@@ -138,22 +141,17 @@ class RecTV : MainAPI() {
         }
     }
 
-    override suspend fun loadLinks(
-        data: String, 
-        isCasting: Boolean, 
-        subtitleCallback: (SubtitleFile) -> Unit, 
-        callback: (ExtractorLink) -> Unit
-    ): Boolean {
+    override suspend fun loadLinks(data: String, isCasting: Boolean, subtitleCallback: (SubtitleFile) -> Unit, callback: (ExtractorLink) -> Unit): Boolean {
         if (data.startsWith("http")) {
             Log.d("RCTV", "data » $data")
             callback.invoke(
-                newExtractorLink(
-                    source = this.name,
-                    name = this.name,
-                    url = data,
+                ExtractorLink(
+                    source  = this.name,
+                    name    = this.name,
+                    url     = data,
                     referer = "https://twitter.com/",
                     quality = Qualities.Unknown.value,
-                    type = INFER_TYPE
+                    type    = INFER_TYPE
                 )
             )
             return true
@@ -164,13 +162,13 @@ class RecTV : MainAPI() {
         for (source in veri.sources) {
             Log.d("RCTV", "source » $source")
             callback.invoke(
-                newExtractorLink(
-                    source = this.name,
-                    name = "${this.name} - ${source.type}",
-                    url = source.url,
+                ExtractorLink(
+                    source  = this.name,
+                    name    = "${this.name} - ${source.type}",
+                    url     = source.url,
                     referer = "https://twitter.com/",
                     quality = Qualities.Unknown.value,
-                    type = if (source.type == "mp4") ExtractorLinkType.VIDEO else ExtractorLinkType.M3U8
+                    type    = if (source.type == "mp4") ExtractorLinkType.VIDEO else ExtractorLinkType.M3U8
                 )
             )
         }
