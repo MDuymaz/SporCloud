@@ -1,7 +1,4 @@
-// ! Bu araç @keyiflerolsun tarafından | @KekikAkademi için yazılmıştır.
-// ! https://github.com/Amiqo09/Diziyou-Cloudstream
-
-package com.SporCloud
+package com.SporCloud  // Doğru paket ismiyle güncellendi
 
 import android.util.Log
 import com.lagradost.cloudstream3.*
@@ -48,9 +45,7 @@ class RecTV : MainAPI() {
             if (item.label != "CANLI" && item.label != "Canlı") {
                 newMovieSearchResponse(item.title, toDict, TvType.Movie) { this.posterUrl = item.image }
             } else {
-                newLiveSearchResponse(item.title, toDict, TvType.Live) {
-                    this.posterUrl = item.image
-                }
+                newLiveSearchResponse(item.title, toDict, TvType.Live) { this.posterUrl = item.image }
             }
         }
 
@@ -145,11 +140,13 @@ class RecTV : MainAPI() {
         if (data.startsWith("http")) {
             Log.d("RCTV", "data » $data")
             callback.invoke(
-                newExtractorLink(
+                ExtractorLink(
                     source = this.name,
                     name = this.name,
-                    url = data
-                    // Removed referer and quality since they might not be valid parameters
+                    url = data,
+                    referer = "https://twitter.com/",
+                    quality = Qualities.Unknown.value,
+                    type = INFER_TYPE
                 )
             )
             return true
@@ -160,11 +157,13 @@ class RecTV : MainAPI() {
         for (source in veri.sources) {
             Log.d("RCTV", "source » $source")
             callback.invoke(
-                newExtractorLink(
+                ExtractorLink(
                     source = this.name,
                     name = "${this.name} - ${source.type}",
                     url = source.url,
-                    // Removed referer and quality
+                    referer = "https://twitter.com/",
+                    quality = Qualities.Unknown.value,
+                    type = if (source.type == "mp4") ExtractorLinkType.VIDEO else ExtractorLinkType.M3U8
                 )
             )
         }
