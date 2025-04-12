@@ -1,7 +1,7 @@
 version = 28
 
 cloudstream {
-    authors     = listOf("keyiflerolsun", "muratcesmecioglu")
+    authors     = listOf("SporCloud")
     language    = "tr"
     description = "en yeni dizileri güvenli ve hızlı şekilde sunar."
 
